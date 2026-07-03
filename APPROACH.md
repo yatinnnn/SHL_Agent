@@ -78,12 +78,12 @@ deterministic fallback path, catching regressions in CI.
 FastAPI + Pydantic v2 (schema is enforced at both request and response
 boundaries), scikit-learn + rank_bm25 (zero-download retrieval), httpx +
 tenacity for the LLM client (async, retried, hard 20s timeout well under the
-30s per-call cap). Groq (Llama 3.3 70B) as the default provider for JSON-mode
+30s per-call cap). Groq (Llama 3.3 70B Versatile) as the default provider for JSON-mode
 speed on the free tier; Gemini and OpenRouter supported via env swap.
 
 ## AI tools used
 
-Cursor / Claude were used to draft boilerplate (scraper skeleton, pydantic
-models, Dockerfile). All prompt logic, planner design, retrieval fusion,
-force-clarify rule, and evaluation harness were designed by hand and can be
-walked through line-by-line.
+ChatGPT was used for design discussions, debugging, deployment guidance, and documentation. 
+AI assistance was also used for drafting boilerplate code where appropriate. The retrieval pipeline, 
+planner logic, prompt design, force-clarify rule, evaluation harness, integration, testing, 
+and validation were implemented and verified manually.
